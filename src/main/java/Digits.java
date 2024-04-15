@@ -14,7 +14,7 @@ public class Digits
 		n++;
 		num1/10;
 	}
-	for(int=0;i<n;i++){
+	for(int i=0;i<n;i++){
 		digitList.add(num%10);
 		num/10;
 	}
