@@ -12,11 +12,11 @@ public class Digits
 	int num1 = num;
 	while(num1>=1){
 		n++;
-		num1/10;
+		num1 = num1/10;
 	}
 	for(int i=0;i<n;i++){
 		digitList.add(num%10);
-		num/10;
+		num = num/10;
 	}
 		digitList = reverse(digitList);
 	}
