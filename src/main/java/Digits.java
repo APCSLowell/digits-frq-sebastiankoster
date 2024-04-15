@@ -37,7 +37,7 @@ public class Digits
 	
 	public ArrayList<Integer> reverse(ArrayList<Integer> list) {
     if(list.size() > 1) {                   
-        Object value = list.remove(0);
+        Integer value = list.remove(0);
         reverse(list);
         list.add(value);
     }
