@@ -6,13 +6,27 @@ public class Digits
 	private ArrayList<Integer> digitList;
 
 	public Digits(int num)
-	{ /* to be implemented in part (a) */ 
-	    
+	{
+	digitList = new ArrayList<Integer>();
+	int n = 0;
+	int num1 = num;
+	while(num1>=1){
+		n++;
+		num1/10;
+	}
+	for(int=0;i<n;i++){
+		digitList.add(num%10);
+		num/10;
+	}
+		digitList = reverse(digitList);
 	}
 
 	public boolean isStrictlyIncreasing()
-	{ /* to be implemented in part (b) */
-		
+	{ 
+	for(int i =0; i<digitList.size()-2;i++){
+		if(digitList.get(i)>=digitList.get(i+1)) return false;
+	return true;
+	}	
 
 	}
 	
@@ -20,4 +34,13 @@ public class Digits
 	{
 		return digitList.toString();
 	}
+	
+	public ArrayList<Integer> reverse(ArrayList<Integer> list) {
+    if(list.size() > 1) {                   
+        Object value = list.remove(0);
+        reverse(list);
+        list.add(value);
+    }
+    return list;
+}
 }
