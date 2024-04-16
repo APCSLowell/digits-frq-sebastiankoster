@@ -22,11 +22,11 @@ public class Digits
 
 	public boolean isStrictlyIncreasing()
 	{ 
-	for(int i =0; i<digitList.size()-2;i++){
-		if(digitList.get(i)>=digitList.get(i+1)) return false;
-	
-	}	
-return true;
+	for(int i = 1; i < digitList.size(); i++)
+        	if(digitList.get(i - 1).compareTo(digitList.get(i)) >= 0)
+            		return false;
+
+    	return true;
 	}
 	
 	public String toString()
