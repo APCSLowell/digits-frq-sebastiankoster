@@ -27,7 +27,7 @@ public class Digits
 	
 	}	
 return true;
-	}1
+	}
 	
 	public String toString()
 	{
