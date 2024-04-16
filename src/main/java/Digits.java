@@ -7,17 +7,15 @@ public class Digits
 
 	public Digits(int num)
 	{
-	digitList = new ArrayList<Integer>();
-	int n = 0;
-	int num1 = num;
-	while(num1>=1){
-		n++;
-		num1 = num1/10;
-	}
-	for(int i=0;i<n;i++){
-		digitList.add(0,num%10);
-		num = num/10;
-	}
+    digitList = new ArrayList<Integer>();
+    digitList.add(0, new Integer(num % 10));
+
+    int numRemaining = num / 10;
+    while(numRemaining > 0)
+    {
+        digitList.add(0, new Integer(numRemaining % 10));
+        numRemaining /= 10;
+    }
 	}
 
 	public boolean isStrictlyIncreasing()
