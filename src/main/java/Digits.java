@@ -15,10 +15,9 @@ public class Digits
 		num1 = num1/10;
 	}
 	for(int i=0;i<n;i++){
-		digitList.add(num%10);
+		digitList.add(0,num%10);
 		num = num/10;
 	}
-		digitList = reverse(digitList);
 	}
 
 	public boolean isStrictlyIncreasing()
@@ -28,19 +27,11 @@ public class Digits
 	
 	}	
 return true;
-	}
+	}1
 	
 	public String toString()
 	{
 		return digitList.toString();
 	}
-	
-	public ArrayList<Integer> reverse(ArrayList<Integer> list) {
-    if(list.size() > 1) {                   
-        Integer value = list.remove(0);
-        reverse(list);
-        list.add(value);
-    }
-    return list;
-}
+
 }
